@@ -40,14 +40,18 @@
 //
 // ********************************************************************
 /**********************************************************************
-            Edited by: Ryan Trisnojoyo
-            Last Edited: 10/06/2018
-
-    1. I edited and refactored the code with Visual Studio Code. I eliminated unnecessary variables and calculations.
-    2. - My strategy is to always check the code and tested the last result with passing the value a1, a2,a3, and a4 to 
-    make sure the result is still the same after I edited.
-       - I also use Git, if something is wrong, I can go back to the previous version.
-    3. With passing the value a1,a2,a3, and a4.   
+/*            Edited by: Ryan Trisnojoyo
+/*            Last Edited: 10/06/2018
+/*
+/*    1. I edited and refactored the code with Visual Studio Code. I eliminated unnecessary variables and calculations.
+/*    2. - My strategy is to always check the code (compile it often) and tested the last result with passing the value a1, a2,a3, and a4 to 
+/*    make sure the result is still the same after I edited.
+/*       - I also use Git, if something is wrong, I can go back to the previous version.
+/*    3. With passing the value a1,a2,a3, and a4.
+/*          the program will run with the a1 time, and check the input of a2 must < a3.
+/*          if a2 is negative or less than the a3, the program will keep continue and until a1 time.
+/*          
+/*          the overall program is doing is passing some inputs value (a1,a2,a3,a4). Do some calculations and return TRUE(1) OR FALSE (0).
 */
 
 signed int __cdecl f0700(int a1, int *a2, int a3, int *a4)
