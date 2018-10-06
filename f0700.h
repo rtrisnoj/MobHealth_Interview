@@ -39,7 +39,16 @@
 //  Good Luck!
 //
 // ********************************************************************
+/**********************************************************************
+            Edited by: Ryan Trisnojoyo
+            Last Edited: 10/06/2018
 
+    1. I edited and refactored the code with Visual Studio Code. I eliminated unnecessary variables and calculations.
+    2. - My strategy is to always check the code and tested the last result with passing the value a1, a2,a3, and a4 to 
+    make sure the result is still the same after I edited.
+       - I also use Git, if something is wrong, I can go back to the previous version.
+    3. With passing the value a1,a2,a3, and a4.   
+*/
 
 signed int __cdecl f0700(int a1, int *a2, int a3, int *a4)
 {
@@ -59,55 +68,58 @@ signed int __cdecl f0700(int a1, int *a2, int a3, int *a4)
 
     //declare all variables
    int *v4, *v10;
-   int v5, v6, v7, v9, v11, v12, v13, v14, v15;
-   int o1;
-   int a2a;
+   int v5, v6, v7, v9, v11, v12, v13, v14;
+   int o1 = 0; // the result we want
+   int a2a = 0;
 
     // assign the variables
    v4 = a2;
-   v5 = a1;
-   v6 = 0;
+   v5 = a1; // limit for the counter
+   v6 = 0; // counter will count up
    v7 = a2[a1];
    v9 = -1;
-   
    v14 = a2[a1 - 1];
-   v15 = v7;
+   
 
-   o1 = 0;
    a2[a1 - 1] = 10000;
    a2[a1] = -10000;
-   a2a = 0;
 
     //conditional if
    if (a1 > 0)
    {
-      v10 = a4;
+      
       do
       {
          v11 = (int)&v4[v6++];
          *v10 = v11;
          v12 = (int)&v4[v6];
-         if (v9 * (*(int *)v11 - *(int *)v12) < a3)
+         
+         
+         if (v9 * (v11 - v12) < a3)
          {
             do
             {
-               if (v9 * *(int *)v12 > v9 * *(int *)*v10)
+               if (v9 * v12 > (v9 * *v10)){
                   *v10 = v12;
-               v13 = *(int *)(v12 + 4);
+               }
+               v13 = (v12 + 4);
                v12 += 4;
                ++v6;
-            } while (v9 * (*(int *)*v10 - v13) < a3);
-            v5 = a1;
+            } while (v9 * (*v10 - v13) < a3);
          }
+         
          ++v10;
          v9 = -v9;
          o1 = a2a++ + 1;
       } while (v6 < v5);
+
    }
-   if (o1 % 2)
+
+    //conditional if
+   if (o1 % 2){
       --o1;
-   v4[v5 - 1] = v14;
-   v4[v5] = v15;
+   }
+
    return o1;
 }
 
