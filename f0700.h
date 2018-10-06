@@ -57,33 +57,28 @@ signed int __cdecl f0700(int a1, int *a2, int a3, int *a4)
    //    a3: value shouldn't changed
    //    a4: value can changed
 
-
-   int *v4;
-   int v5;
-   int v6;
-   int v7;
+    //declare all variables
+   int *v4, *v10;
+   int v5, v6, v7, v9, v11, v12, v13, v14, v15;
    int o1;
-   int v9;
-   int *v10;
-   int v11;
-   int v12;
-   int v13;
-   int v14;
-   int v15;
    int a2a;
 
+    // assign the variables
    v4 = a2;
    v5 = a1;
    v6 = 0;
    v7 = a2[a1];
-   v14 = a2[a1 - 1];
-   o1 = 0;
    v9 = -1;
-   a2[a1 - 1] = 10000;
+   
+   v14 = a2[a1 - 1];
    v15 = v7;
+
+   o1 = 0;
+   a2[a1 - 1] = 10000;
    a2[a1] = -10000;
    a2a = 0;
 
+    //conditional if
    if (a1 > 0)
    {
       v10 = a4;
